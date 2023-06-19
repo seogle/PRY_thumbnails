@@ -5,7 +5,7 @@ from exif import Image
 PRY_paths = glob('/Volumes/CW3E_data/CW3E_Streamflow_Archive/All_RR_Field_Cam_Photos/PRY/*') #get all the path names of the cropped PRY photos
 
 #create thumbnails and save them
-save_path = '/data/CW3E_data/CW3E_Streamflow_Archive/All_RR_Field_Cam_Photos/thumbnails/PRY_full_time_series/'
+save_path = '/Volumes/seogle/code/PRY_thumbnails/PRY_all/'
 MAX_SIZE = (204.8,115.2)
 data = {}
 data['path']= []
@@ -21,4 +21,4 @@ for i in PRY_paths:
     data['path'].append(i)
     data['date'].append(date)
 path_date_PRY = pd.DataFrame({'date':data['date'], 'path':data['path']})
-path_date_PRY.to_csv('/Users/cloudy-guest/Documents/GitHub/PRY_thumbnails/Thumbnails/PRY_all_photos_date_path')
+path_date_PRY.to_csv('/Volumes/seogle/code/PRY_thumbnails/PRY_path_date.csv')

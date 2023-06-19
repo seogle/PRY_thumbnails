@@ -1,6 +1,7 @@
 from glob import glob
 from PIL import Image as Im
 from exif import Image
+import pandas as pd
 #read in paths of cropped photos
 PRY_paths = glob('/Volumes/CW3E_data/CW3E_Streamflow_Archive/All_RR_Field_Cam_Photos/PRY/*') #get all the path names of the cropped PRY photos
 

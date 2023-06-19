@@ -20,4 +20,5 @@ for i in PRY_paths:
     date = img_bi.get('datetime_original') #extract date
     data['path'].append(i)
     data['date'].append(date)
-data.to_csv('/Users/cloudy-guest/Documents/GitHub/PRY_thumbnails/Thumbnails/PRY_all_photos_date_path')
+path_date_PRY = pd.DataFrame({'date':data['date'], 'path':data['path']})
+path_date_PRY.to_csv('/Users/cloudy-guest/Documents/GitHub/PRY_thumbnails/Thumbnails/PRY_all_photos_date_path')
